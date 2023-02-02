@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PasienDummy extends Model
 {
-    use HasFactory;
+    // use HasFactory;
+    protected $table = 'pasien';
+    protected $primaryKey = 'no_rkm_medis';
 }
