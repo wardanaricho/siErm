@@ -1,30 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.main')
+@section('container')
+    <div class="card card-default color-palette-box">
+        <div class="card-header">
+            <h3 class="card-title">
+                <i class="fas fa-tag"></i>
+                Semua Pasien
+            </h3>
+        </div>
+        <div class="card-body">
+            <div class="col-12">
+                <h5>Theme Colors</h5>
+            </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+        </div>
+        <!-- /.card-body -->
+    </div>
 
-<body>
-    <table>
-        <tr>
-            <th>no rm</th>
-            <th>nama</th>
-        </tr>
-        @foreach ($pasiens as $pasien)
-            <tr>
-                <td>
-                    <a href="/dummyPasien/{{ $pasien->no_rkm_medik }}">
-                        {{ $pasien->no_rkm_medik }}
-                    </a>
-                </td>
-                <td>{{ $pasien->nama }}</td>
-            </tr>
-        @endforeach
-    </table>
-</body>
 
-</html>
+    <script src="{{ asset('adminLte/plugins/jquery/jquery.min.js') }}"></script>
+    <!-- Bootstrap 4 -->
+    <script src="{{ asset('adminLte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <!-- DataTables  & Plugins -->
+    <script src="{{ asset('adminLte/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('adminLte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('adminLte/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
+    <script src="{{ asset('adminLte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('adminLte/plugins/datatables-buttons/js/dataTables.buttons.min.js') }}"></script>
+    <script src="{{ asset('adminLte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('adminLte/plugins/jszip/jszip.min.js') }}"></script>
+    <script src="{{ asset('adminLte/plugins/pdfmake/pdfmake.min.js') }}"></script>
+    <script src="{{ asset('adminLte/plugins/pdfmake/vfs_fonts.js') }}"></script>
+    <script src="{{ asset('adminLte/plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>
+    <script src="{{ asset('adminLte/plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
+    <script src="{{ asset('adminLte/plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
+@endsection

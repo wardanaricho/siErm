@@ -246,9 +246,9 @@
 
             <!-- Main content -->
             <section class="content">
-
-                @yield('container')
-
+                <div class="container-fluid">
+                    @yield('container')
+                </div>
             </section>
             <!-- /.content -->
         </div>
