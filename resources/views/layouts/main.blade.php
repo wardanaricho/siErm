@@ -153,6 +153,39 @@
                         <i class="fas fa-expand-arrows-alt"></i>
                     </a>
                 </li>
+                <li class="nav-item disabled">
+                    <div class="vl" style="border-left: 1px solid lightgray; height: 2.5rem;"></div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-user"></i>
+
+                        {{-- <span class="badge badge-warning navbar-badge">15</span> --}}
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                        <span class="dropdown-item dropdown-header">Administrator</span>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item text-center">
+                            Profile
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item text-center">
+                            Hubungi Developer
+                        </a>
+                        <div class="dropdown-divider"></div>
+
+
+                        <div class="text-center">
+
+                            <button type="submit" class="btn btn-sm btn-danger " data-toggle="modal"
+                                data-target="#modal-sm">
+                                Logout
+                            </button>
+
+                        </div>
+
+                    </div>
+                </li>
                 {{-- <li class="nav-item">
                     <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"
                         role="button">
@@ -236,6 +269,35 @@
         <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
+
+    <div class="modal fade" id="modal-sm">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Logout</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Apa anda yakin akan logout?</p>
+                </div>
+                <div class="float-right">
+                    <div class="modal-footer">
+
+                        <form action="/logout" method="post">
+                            @csrf
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-danger">Logout</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
 
     <!-- jQuery -->
     <script src="{{ asset('adminLte/plugins/jquery/jquery.min.js') }}"></script>

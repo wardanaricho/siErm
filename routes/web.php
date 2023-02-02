@@ -4,8 +4,6 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DummyPasienController;
 use App\Http\Controllers\PasienDummyController;
-use App\Models\DummyPasien;
-use App\Models\PasienDummy;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,9 +21,10 @@ use Illuminate\Support\Facades\Route;
 //     return view('layouts.main');
 // });
 
-Route::get('/', [DashboardController::class, 'index']);
-Route::get('/login', [AuthController::class, 'login']);
+Route::get('/', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'authenticate']);
+Route::post('/logout', [AuthController::class, 'logout']);
 
-Route::get('/pasien', [DummyPasienController::class, 'index']);
-// Route::resource('/pasien', [DummyPasienController::class])->middleware('guest');
+// Route::get('/pasien', [DummyPasienController::class, 'index']);
+Route::resource('/dummyPasien', DummyPasienController::class)->middleware('auth');

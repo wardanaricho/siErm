@@ -13,6 +13,7 @@ class DummyPasienController extends Controller
             'pasiens' => DummyPasien::all()
         ];
 
-        dd($data);
+        // dd($data);
+        return view('dummyPasien.dummyPasien', $data);
     }
 }

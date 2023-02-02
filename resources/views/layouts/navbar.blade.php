@@ -9,12 +9,21 @@
              </a>
          </li>
 
-         <li class="nav-item">
+         {{-- <li class="nav-item">
              <a href="../widgets.html" class="nav-link">
                  <i class="nav-icon fas fa-th"></i>
                  <p>
-                     Widgets
+                     Dummy Menu
                      <span class="right badge badge-danger">New</span>
+                 </p>
+             </a>
+         </li> --}}
+
+         <li class="nav-item">
+             <a href="" class="nav-link">
+                 <i class="nav-icon fas fa-th"></i>
+                 <p>
+                     Semua Pasien
                  </p>
              </a>
          </li>
@@ -23,33 +32,27 @@
              <a href="#" class="nav-link">
                  <i class="nav-icon fas fa-chart-pie"></i>
                  <p>
-                     Charts
+                     Pasien
                      <i class="right fas fa-angle-left"></i>
                  </p>
              </a>
              <ul class="nav nav-treeview">
                  <li class="nav-item">
-                     <a href="../charts/chartjs.html" class="nav-link">
+                     <a href="" class="nav-link">
                          <i class="far fa-circle nav-icon"></i>
-                         <p>ChartJS</p>
+                         <p>Pasien Hari Ini</p>
                      </a>
                  </li>
                  <li class="nav-item">
-                     <a href="../charts/flot.html" class="nav-link">
+                     <a href="" class="nav-link">
                          <i class="far fa-circle nav-icon"></i>
-                         <p>Flot</p>
+                         <p>Pasien Bulan Ini</p>
                      </a>
                  </li>
                  <li class="nav-item">
-                     <a href="../charts/inline.html" class="nav-link">
+                     <a href="" class="nav-link">
                          <i class="far fa-circle nav-icon"></i>
-                         <p>Inline</p>
-                     </a>
-                 </li>
-                 <li class="nav-item">
-                     <a href="../charts/uplot.html" class="nav-link">
-                         <i class="far fa-circle nav-icon"></i>
-                         <p>uPlot</p>
+                         <p>Pasien Tahun Ini</p>
                      </a>
                  </li>
              </ul>

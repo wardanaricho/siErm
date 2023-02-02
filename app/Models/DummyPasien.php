@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class DummyPasien extends Model
 {
     use HasFactory;
+
+    public function getRouteKeyName()
+    {
+        return 'no_rkm_medik';
+    }
 }
